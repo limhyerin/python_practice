@@ -1,4 +1,5 @@
-
+# 리스트를 평탄화하는 프로그램
+# case1
 def flatten(data):
     output = []
     for item in data:
@@ -12,7 +13,7 @@ example = [[1,2,3],[4,[5,6]],7,[8,9]]
 print("원본: ", example)
 print("변환: ", flatten(example))
 
-"""
+#case 2
 def flatten(example):
     output = []
     for i in example:
@@ -26,4 +27,3 @@ def flatten(example):
 example = [[1,2,3],[4,[5,6]],7,[8,9]]
 print(flatten(example))
 
-"""

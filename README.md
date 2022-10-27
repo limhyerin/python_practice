@@ -4,15 +4,18 @@
 [Source code] - 소스코드
 
 (모듈 읽어 들임)
+
 from flask import Flask
 from urllib import request
 from bs4 import BeautifulSoup
 
 (웹 서버 생성)
+
 app = Flask(__name__)
 @app.route("/")
 
 (hello 함수)
+
 def hello():
     # urlopen() 함수로 기상청의 전국 날씨를 읽습니다
     target = request.urlopen("http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108") #기상청 html

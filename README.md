@@ -1,5 +1,3 @@
-# python_practice
-
 # module pratice_ BeautifulSoupt
 #BeautifulSoup를 이용하여 웹사이트 정보 추출
 

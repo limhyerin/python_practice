@@ -2,6 +2,7 @@
 #BeautifulSoup를 이용하여 웹사이트 정보 추출
 
 [Source code] - 소스코드
+
 # 모듈 읽어 들임
 from flask import Flask
 from urllib import request

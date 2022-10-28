@@ -1,28 +1,32 @@
-# 별도 추가
-class student():
-    def create_student(self, name, korean, math, english, science):
+# 클래스 선언
+class Student():
+    def __init__(self, name, korean, math, english, science):
             self.name = name
             self.korean = korean
             self.math = math
             self.english = english
             self.science = science
 
-    students = [
-        create_student("윤인성", 87, 98, 88, 95),
-        create_student("연하진", 92, 98, 96, 98),
-        create_student("구지연", 76, 96, 94, 90),
-        create_student("나선주", 98, 92, 96, 92),
-        create_student("윤아린", 95, 98, 98, 98),
-        create_student("윤명월", 64, 88, 92, 92)
-    ]
-
-    def score_sum(self):
+    def get_sum(self):
         return self.korean + self.math + self.english + self.science
 
-    def score_avg(self):
-        avg = self.score_sume() / 4
-        return avg
+    def get_average(self):
+        return self.get_sum() / 4
+    
+    def to_string(self):
+        return "{}\t{}\t{}".format(self.name, self.get_sum(), self.get_average())
 
-a = student()
-print(a.score_sum())
-print(a.score_avg())
+students = [
+        Student("윤인성", 87, 98, 88, 95),
+        Student("연하진", 92, 98, 96, 98),
+        Student("구지연", 76, 96, 94, 90),
+        Student("나선주", 98, 92, 96, 92),
+        Student("윤아린", 95, 98, 98, 98),
+        Student("윤명월", 64, 88, 92, 92)
+]
+
+print("이름","총점","평균",sep="\t")
+for student in students:
+    print(student.to_string())
+
+

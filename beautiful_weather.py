@@ -1,3 +1,4 @@
+# http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109
 # 모듈을 읽어 들입니다
 from urllib import request
 from bs4 import BeautifulSoup
@@ -16,3 +17,5 @@ for location in soup.select("location"):
     print("최저기온:", location.select_one("tmn").string)
     print("최고기온:", location.select_one("tmx").string)
     print()
+
+    
